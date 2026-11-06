@@ -1,19 +1,21 @@
 {
-  "name": "-node-js-",
+  "name": "nodejs-application-deploy-github-actions",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Bikash Kushwaha",
   "license": "ISC",
-  "description": "",
+  "description": "Minimal Express API containerized with Docker and built/published by GitHub Actions",
   "dependencies": {
-    "express": "^5.2.1",
-    "exprss": "^0.0.1-security"
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.6"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

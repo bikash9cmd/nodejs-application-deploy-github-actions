@@ -2,12 +2,16 @@ FROM node:22-alpine
 
 WORKDIR /app
 
+ENV NODE_ENV=production \
+    PORT=8080
+
 COPY package*.json ./
-RUN npm install
+RUN npm ci --omit=dev
 
-COPY . .
+COPY index.js ./
 
-EXPOSE 8000
+USER node
 
-CMD ["node", "index"]
+EXPOSE 8080
 
+CMD ["node", "index.js"]
